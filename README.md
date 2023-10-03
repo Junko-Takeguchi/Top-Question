@@ -1,27 +1,40 @@
-# React + TypeScript + Vite
+# Top-Question
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Top-Question is a real-time question and answer application built with React, Express, and Socket.IO. It allows users to participate in interactive Q&A sessions, upvote questions, and receive instant updates as questions are asked and upvoted.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Authentication**: Users can sign up and log in securely to participate in Q&A sessions. JWT (JSON Web Tokens) are used for authentication, and user passwords are securely hashed and stored.
 
-## Expanding the ESLint configuration
+- **Real-Time Updates**: Top-Question leverages Socket.IO to provide real-time updates. As users ask questions or upvote existing ones, the changes are instantly reflected for all participants.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Question Voting**: Users can upvote questions they find interesting, and the questions are sorted based on the number of upvotes, ensuring that the most popular questions rise to the top.
 
-- Configure the top-level `parserOptions` property like this:
+- **Cookie-Based Sessions**: JWT tokens are securely stored as cookies, providing a seamless and secure user experience. Cookies are configured with the appropriate `SameSite` and `Secure` attributes for security.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- **RESTful API**: The server-side of the application is built using Express.js, providing a RESTful API for handling user registration, authentication, and question management.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Getting Started
+
+To get started with Top-Question, follow these simple steps:
+
+1. Clone the repository to your local machine.
+2. Install the necessary dependencies for both the client and server.
+3. Configure the environment variables for your application, including secret keys and database connections.
+4. Run the server and client applications, and access the app from your browser.
+
+## Requirements
+
+- Node.js
+- React
+- Express.js
+- Prisma ORM
+- Socket.IO
+- Axios
+- bcrypt
+- Cors
+- and more (check package.json for the full list)
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to the development of Top-Question or have any suggestions, feel free to open issues or create pull requests. We're excited to build and improve this application together.
