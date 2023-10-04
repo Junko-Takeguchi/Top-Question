@@ -65,7 +65,9 @@ app.post('/api/login', async (req, res) => {
         }
         const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET as string, { expiresIn: '1d' });
         // Set the JWT in a cookie
-        res.cookie('jwt', token, { httpOnly: true, sameSite: "lax", secure: false});
+        res.cookie('jwt', token, { httpOnly: true,
+            secure: true,
+            sameSite: "none",});
         return res.status(200).json(user);
     } catch (e) {
         console.log(e);
