@@ -17,7 +17,7 @@ const Join = () => {
         if (join) {
             navigate(`/playground/${input}`);
         } else {
-            const {data} = await axios.post("http://localhost:3001//api/createPlayground", {
+            const {data} = await axios.post(`${import.meta.env.VITE_BACKEND_URL}api/createPlayground`, {
                 title: input,
                 userId: currentUser.id
             });
