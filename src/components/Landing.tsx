@@ -66,7 +66,7 @@ const Landing = () => {
                             </button>
                         </div>
                         <p className="text-center text-sm text-gray-500">Don&#x27;t have an account yet?
-                            <a href="/signup"
+                            <a onClick={() => {navigate("/signup")}}
                                className="font-semibold text-gray-600 hover:underline focus:text-gray-800 focus:outline-none">Sign
                                 up
                             </a>.
