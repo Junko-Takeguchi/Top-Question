@@ -46,10 +46,10 @@ const Landing = () => {
                                         username: email,
                                         password
                                     }
-                                    console.log(d);
+                                    // console.log(d);
                                     try {
                                         const {data} = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/login`, d);
-                                        console.log(data);
+                                        // console.log(data);
                                         setUser({
                                             id: data.id,
                                             userName: data.username

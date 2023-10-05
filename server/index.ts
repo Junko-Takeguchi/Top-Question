@@ -86,7 +86,7 @@ app.post("/api/createPlayground", async (req, res) => {
     }
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
-        console.log(decoded);
+        // console.log(decoded);
         const playground = await prisma.playground.create({
             data: {
                 title,

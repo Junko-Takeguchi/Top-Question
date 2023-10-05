@@ -65,7 +65,7 @@ const Playground = () => {
         })
             .then(res => res.data)
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 setCurrentUser({
                     id: data.id,
                     userName: data.username

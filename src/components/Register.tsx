@@ -45,10 +45,10 @@ const Register = () => {
                                         username: email,
                                         password
                                     }
-                                    console.log(d);
+                                    // console.log(d);
                                     try {
-                                        const {data} = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/signup`, d);
-                                        console.log(data);
+                                        await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/signup`, d);
+                                        // console.log(data);
                                         navigate("/")
                                     }
                                     catch (e) {
